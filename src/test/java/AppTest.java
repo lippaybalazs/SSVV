@@ -50,4 +50,17 @@ public class AppTest
         service.saveTema("1", "1", 1, 1);
         assertEquals(0, service.saveTema("1", "1", 1, 1));
     }
+
+    @Test
+    public void Service_saveStudent_Valid_Success()
+    {
+        assertEquals(1, service.saveStudent("1", "1", 111));
+    }
+
+    @Test
+    public void Service_saveStudent_Duplicate_Failure()
+    {        
+        service.saveStudent("1", "1", 111);
+        assertEquals(0, service.saveStudent("1", "1", 111));
+    }
 }
