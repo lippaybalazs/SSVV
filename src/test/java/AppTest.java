@@ -36,6 +36,11 @@ public class AppTest
         {
             service.deleteTema(t.getID());
         }
+
+        for(Student s : service.findAllStudents())
+        {
+            service.deleteStudent(s.getID());
+        }
     }
 
     @Test
